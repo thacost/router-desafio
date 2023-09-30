@@ -1,0 +1,76 @@
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-primary);
+    color: #FFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header span {
+    font-size: 1.5rem; /* 24px -> 16px = 1rem */
+    font-weight: bold;
+}
+
+.header a {
+    text-decoration: none;
+    color: var(--color-white);
+    padding-right: 1.5rem;
+    font-size: 1.125rem; /* 18px */
+
+
+}
+
+.header a:hover {
+    color: var(--color-red);
+    transition: all .5s; /* transição do botão, para deixar mais suave */
+}
+
+/* menu sandwich */
+
+@media (max-width: 768px) {
+    .menuButton {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .linha {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
+
+    .menuSandwich {
+        display: none;
+    }
+
+    .show {
+        display: flex;
+        width: 50%;
+        height: auto;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: var(--color-primary);
+        flex-direction: column;
+        padding: 20px;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .show {
+        width: 100%;
+    }
+}
+
